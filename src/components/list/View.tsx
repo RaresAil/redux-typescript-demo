@@ -29,7 +29,7 @@ export default class List extends Component<PropsFromRedux> {
               <form onSubmit={(e) => {
                 e.preventDefault();
                 this.props.actions.remove(i);
-              }} className="list-item" key={i}>
+              }} data-testid={`list-item-${d.name.toLowerCase().trim().replace(' ', '-')}`} className="list-item" key={i}>
                 <span>{d.name}</span>
                 <button type="submit">Remove</button>
               </form>
